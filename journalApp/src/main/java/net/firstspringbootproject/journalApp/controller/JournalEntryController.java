@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @RestController
-@RequestMapping("/journal")
+@RequestMapping("/_journal")
 public class JournalEntryController {
 
     private HashMap<Long, JournalEntry> journalEntries = new HashMap<>();
@@ -20,7 +20,6 @@ public class JournalEntryController {
 
     @PostMapping
     public boolean createEntry(@RequestBody JournalEntry myEntry){
-        journalEntries.put(myEntry.getId(),myEntry);
         return true;
     }
 
